@@ -1,3 +1,25 @@
 #root {
     background-color: #A1C7E1;
 }
+
+.appWrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+.purchasesHeader {
+    background-color: #B0D0E7;
+}
+
+.totalBar {
+    background-color: #EAF2FF;
+}
+
+.purchaseDisplayFooter {
+    background-color: #EAF2FF;
+}
+
+.tableBody {
+    background: linear-gradient(180deg, rgba(229, 229, 229, 0.85) 84.56%, #C7C6C6 90.92%, #A8A4A4 100%), #E8E5E5;
+}
