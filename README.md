@@ -11,8 +11,8 @@ to work properly, make sure you input your cost as just a numerical value.
 
 To run project, clone repository and run `npm install` in the root directory\
 to install the package dependencies. Then, run `npm start` to start the server\
-and interact with the app. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-this will run the app in the development mode. The page will reload if you make edits.\
+and interact with the app. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.\
+This will run the app in the development mode. The page will reload if you make edits.
 
 ## About
 
@@ -23,13 +23,13 @@ a responive layout.
 
 ## Features List
 
--I retrieve data from a quote generator API and display it with the use of Axios
--I create an array of purchases objects and display 
--You can add a new purchase with the Add button. 
--The added purchase will get added to your local storage (clear it when you are done)
--The total is displayed at the bottom with use of the reduce method
--The cost user input from the form is input as a string and I convert it to\
+- I retrieve data from a quote generator API and display it with the use of Axios
+- I create an array of purchases objects and display 
+- You can add a new purchase with the Add button. 
+- The added purchase will get added to your local storage (clear it when you are done)
+- The total is displayed at the bottom with use of the reduce method
+- The cost user input from the form is input as a string and I convert it to\
 a floating value to store in an array that gets used to calculate the total
--You can filter by category with the dropdown 
--Filtering by category will also filter the total and will filter the table also
--This project was created with React, and uses Context and Hooks 
+- You can filter by category with the dropdown 
+- Filtering by category will also filter the total and will filter the table also
+- This project was created with React, and uses Context and Hooks 
