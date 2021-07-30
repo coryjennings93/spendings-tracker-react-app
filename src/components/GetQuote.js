@@ -10,9 +10,7 @@ class GetQuote extends Component {
         this.fetchAdvice();
  
         
-    }
-
-    
+    };
 
     fetchAdvice = () => {
         axios.get('https://api.adviceslip.com/advice')
@@ -28,10 +26,7 @@ class GetQuote extends Component {
             .catch(error => {
                 console.log('There was an error fetching the advice', error);
             });
-    }
-
-
-
+    };
 
     render() {
         const { advice } = this.state;
@@ -40,7 +35,7 @@ class GetQuote extends Component {
         return (
             <div>{ advice }</div>
         );
-    }
+    };
 }
 
 export default GetQuote;

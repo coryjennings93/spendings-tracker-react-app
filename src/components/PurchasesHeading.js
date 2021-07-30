@@ -2,13 +2,13 @@ import React from 'react';
 
 const PurchasesHeading = (props) => {
     return(
-        <thead className="purchasesHeader">
+        <tr>
             <th>ID</th>
             <th>Date</th>
             <th>Category</th>
             <th>Location</th>
             <th>Cost</th>
-        </thead>
+        </tr>
     );
 }
 
