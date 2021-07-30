@@ -4,9 +4,12 @@ import PurchasesHeading from './PurchasesHeading';
 import PurchasesTotalFooter from './PurchasesTotalFooter';
 import AddPurchaseForm from './AddPurchaseForm';
 import AddPurchaseButton from './AddPurchaseButton';
+import FilterByCategoryDropdown from './FilterByCategoryDropdown';
 
 import PurchaseList from './PurchaseList';
+import Pagination from './Pagination';
 import PurchaseContextProvider from '../contexts/PurchaseContext';
+import ButtonsContainer from './ButtonsContainer';
 
 
 import Table from 'react-bootstrap/Table';
@@ -39,8 +42,9 @@ const PurchasesDisplayContainer = (props) => {
             </Table> */}
 
             <PurchaseContextProvider>
-                <AddPurchaseButton /> 
+                <ButtonsContainer />
                 <PurchaseList />
+                <Pagination />
             </PurchaseContextProvider>
 
             {/* <Modal show={show} onHide={handleClose}>

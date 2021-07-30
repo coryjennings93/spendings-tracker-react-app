@@ -37,7 +37,7 @@ const PurchaseList = () => {
                     
             </tbody>
         </table> 
-        
+
     
     );
 }

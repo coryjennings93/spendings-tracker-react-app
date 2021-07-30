@@ -15,6 +15,8 @@ const AddPurchaseForm = () => {
 
     // this creates a useContext hook
     const {addPurchase} = useContext(PurchaseContext);
+    const {categoriesList} = useContext(PurchaseContext);
+    console.log(categoriesList);
 
     const [newPurchase, setNewPurchase] = useState({
         date: "mm/dd/yyyy",
@@ -57,10 +59,16 @@ const AddPurchaseForm = () => {
                     required                     
                 >
                     <option value="">Category...</option>
-                    <option value="groceries">Groceries</option>
+                    {categoriesList.map((category, index) => (
+                        <option key={index} value={category}>
+                        {category}
+                        
+                        </option>
+                    ))}
+                    {/* <option value="groceries">Groceries</option>
                     <option value="gas">Gas</option>
                     <option value="restaurant">Restaurant</option>
-                    <option value="wardrobe">Wardrobe</option>
+                    <option value="wardrobe">Wardrobe</option> */}
                 </Form.Control>
             </Form.Group>
             <Form.Group>

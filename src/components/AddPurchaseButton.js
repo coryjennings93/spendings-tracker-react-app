@@ -42,20 +42,7 @@ const AddPurchaseButton = () => {
 
     return (
         <>
-        <div className="d-flex flex-row">
-            <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    Filter by Category
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Gas</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
-            <Button onClick={handleShow} variant="danger">Add</Button>
-        </div>
+        <Button onClick={handleShow} variant="danger">Add</Button>
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
                 Add Purchase

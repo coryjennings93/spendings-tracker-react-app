@@ -44,13 +44,19 @@ const PurchaseContextProvider  = (props) => {
         }
     ]);
 
-    // useEffect(()=> {
-    //     setpurchases(JSON.parse(localStorage.getItem('purchases')))
-    // },[])
+    const categoriesList = ["Transportation", "Restaurant", "Wardrobe", "Groceries", "Pet", 
+                            "Entertainment", "Insurance", "Housing", "Utilities", "Healthcare", 
+                            "Savings/Investment", "Miscellaneous"];
 
-    // useEffect(() => {
-    //     localStorage.setItem('purchases', JSON.stringify(purchases));
-    // })
+    useEffect(()=> {
+        setPurchases(JSON.parse(localStorage.getItem('purchases')))
+    },[])
+
+    useEffect(() => {
+        localStorage.setItem('purchases', JSON.stringify(purchases));
+    })
+
+
 
 
 
@@ -72,7 +78,7 @@ const PurchaseContextProvider  = (props) => {
     // }
 
     return (
-        <PurchaseContext.Provider value={{purchases, addPurchase}}>
+        <PurchaseContext.Provider value={{purchases, addPurchase, categoriesList}}>
             {props.children}
         </PurchaseContext.Provider>
     )
