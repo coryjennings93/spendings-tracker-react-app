@@ -1,16 +1,20 @@
-import React from 'react';
 
-const Purchase = ({ id, date, category, transaction, cost , index }) => {
 
-        return (
-            <tr>
-                <td>{ id }</td>
-                <td>{date}</td>
-                <td>{ category }</td>
-                <td>{ transaction }</td>
-                <td>{ cost }</td>
-            </tr>
-        );
+const Purchase = ({purchase}) => {
+
+
+    return (
+        <>
+            {/* <td>{purchase.id}</td> */}
+            <td>{purchase.date}</td>
+            <td>{purchase.category}</td>
+            <td>{purchase.location}</td>
+            <td>{purchase.cost}</td>
+            {/* <td>
+
+            </td> */}
+        </>
+    );
 }
 
 export default Purchase;

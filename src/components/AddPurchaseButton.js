@@ -15,27 +15,27 @@ const AddPurchaseButton = () => {
 
     const {purchases} = useContext(PurchaseContext);
 
-    const [showAlert, setShowAlert] = useState(false);
+    // const [showAlert, setShowAlert] = useState(false);
 
     const [show, setShow] = useState(false);
 
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false)
 
-    const handleShowAlert = () => {
-        setShowAlert(true);
-        setTimeout(()=> {
-            setShowAlert(false);
-        }, 2000)
-    }
+    // const handleShowAlert = () => {
+    //     setShowAlert(true);
+    //     setTimeout(()=> {
+    //         setShowAlert(false);
+    //     }, 2000)
+    // }
 
     // useEffect hook to close the form when it is submited; fires when the purchases list changes
     useEffect(() => {
         handleClose();
 
-        return () => {
-            handleShowAlert();
-        }
+        // return () => {
+        //     handleShowAlert();
+        // }
     }, [purchases]);
 
 
@@ -54,9 +54,9 @@ const AddPurchaseButton = () => {
                 <Button variant="secondary" onClick={handleClose}>Close Button</Button>
             </Modal.Footer> */}
         </Modal>
-        <Alert show={showAlert} variant="success">
+        {/* <Alert show={showAlert} variant="success">
             Purchase Added Succefully!
-        </Alert>
+        </Alert> */}
         </>
     );
 }

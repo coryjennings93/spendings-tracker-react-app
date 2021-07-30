@@ -1,15 +1,45 @@
 #root {
     background-color: #A1C7E1;
+    min-height: 100vh;
 }
 
 .appWrapper {
-    width: 90%;
+    /* width: 90%; */
     margin: 0 auto;
     padding-bottom: 2em;
+
 }
 
 .purchasesHeader {
     background-color: #B0D0E7;
+}
+
+.logo{
+    height: 15em;
+    margin: 1em;
+}
+
+.quoteCard {
+    background-color: #e1dfd6;
+    /* max-width: 30em; */
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+    padding: .4em 1em;
+    margin-bottom: 1em;
+    border: 1px solid black;
+    /* height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 2%;
+    box-shadow: 10px 10px */
+}
+
+.btn-container {
+    margin-bottom: .5em;
 }
 
 .totalBar {
@@ -20,6 +50,33 @@
     background-color: #EAF2FF;
 }
 
+.tableHead {
+    background-color: rgba(176, 208, 231, 1);
+}
+
 .tableBody {
     background: linear-gradient(180deg, rgba(229, 229, 229, 0.85) 84.56%, #C7C6C6 90.92%, #A8A4A4 100%), #E8E5E5;
+}
+
+.totalBar {
+    background-color: rgba(234, 242, 255, 1);
+}
+
+.addNewPurchase-btn{
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 400px) {
+    table {
+      font-size: .8em;
+    }
+    button {
+        background-color: black;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .btn-container {
+        padding: 0;
+    }
 }

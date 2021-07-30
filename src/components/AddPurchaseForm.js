@@ -12,17 +12,28 @@ import { PurchaseContext } from '../contexts/PurchaseContext';
 
 const AddPurchaseForm = () => {
 
+    // get current date
+    let today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    const yyyy = today.getFullYear();
+
+    today = mm + '/' + dd + '/' + yyyy;
+
+    console.log(today);
+// document.write(today);
+
 
     // this creates a useContext hook
     const {addPurchase} = useContext(PurchaseContext);
     const {categoriesList} = useContext(PurchaseContext);
-    console.log(categoriesList);
+    const {setSelectedCategory} = useContext(PurchaseContext);
 
     const [newPurchase, setNewPurchase] = useState({
-        date: "mm/dd/yyyy",
+        date: "red",
         category: "",
-        location: "2",
-        cost: "2"
+        location: "",
+        cost: ""
     });
 
     const onInputChange = (e) => {
@@ -35,7 +46,10 @@ const AddPurchaseForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         addPurchase(date, category, location, cost);
+        setSelectedCategory("All");
+
     }
+
 
     return (
         <Form onSubmit={handleSubmit}>
@@ -43,7 +57,6 @@ const AddPurchaseForm = () => {
                 <Form.Label>Date</Form.Label>
                 <Form.Control 
                     type="date" 
-                    placeholder="0.00" 
                     name="date"
                     value={date} 
                     onChange = { (e) => onInputChange(e) }
@@ -84,14 +97,14 @@ const AddPurchaseForm = () => {
             <Form.Group>
                 <Form.Label>Price $</Form.Label>
                 <Form.Control 
-                    type="number" 
+                    type="text" 
                     placeholder="0.00"
                     name="cost"
                     value={cost} 
                     onChange = { (e) => onInputChange(e) }
                 />
             </Form.Group>
-            <Button variant="success" type="submit" block>Add New Purchase</Button>
+            <Button className="addNewPurchase-btn"variant="success" type="submit" block>Add New Purchase</Button>
         </Form>
     );
 }

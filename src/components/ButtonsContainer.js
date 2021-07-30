@@ -4,12 +4,10 @@ import AddPurchaseButton from "./AddPurchaseButton";
 
 const ButtonsContainer = () => {
 
-
-
     return (
-        <div className="d-flex flex-row">
+        <div className="btn-container container-fluid d-flex justify-content-between">   
             <FilterByCategoryDropdown />
-            <AddPurchaseButton /> 
+            <AddPurchaseButton />
         </div>
     );
 }

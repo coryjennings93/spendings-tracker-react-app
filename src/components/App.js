@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Header from './Header';
-import Purchase from './Purchase';
 import PurchasesDisplayContainer from './PurchasesDisplayContainer';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';

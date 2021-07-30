@@ -33,7 +33,9 @@ class GetQuote extends Component {
 
         console.log(this.state.quotes);
         return (
-            <div>{ advice }</div>
+            <div className="quoteCardContainer">
+                <div className="quoteCard">{ advice }</div>
+            </div>
         );
     };
 }

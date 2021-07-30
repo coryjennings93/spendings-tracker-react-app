@@ -43,6 +43,9 @@ const PurchasesDisplayContainer = (props) => {
 
             <PurchaseContextProvider>
                 <ButtonsContainer />
+                {/* <Alert show={showAlert} variant="success" value={{purchases, addPurchase, categoriesList}}>
+                    Purchase Added Succefully!
+                </Alert> */}
                 <PurchaseList />
                 <Pagination />
             </PurchaseContextProvider>
